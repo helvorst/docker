@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Ishtar audioteka</title>
+</head>
+
+
+<body>
+    <h1>Play you fav track</h1>
+    <form action="/play" method="POST">
+        <input type="text" placeholder="Song" name="song">
+        <button type="submit">Play</button>
+    </form>
+    <h2>Playlist</h2>
+        <ul>
+            <% for(var i = 0; i < songs.length; i++) { %>
+                <li>
+                    <span><%= songs[i].song %> 
+                        <button data-id="<%=songs[i]._id%>" onclick="deleteSong(this)">delete</button>
+                        <button data-id="<%=songs[i]._id%>" onclick="skipSong(this)">skip</button>
+                    </span>
+                </li>
+            <% } %>
+        </ul>
+    
+    <script src="/main.js"></script>
+</body>
+
+</html>

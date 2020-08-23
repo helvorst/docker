@@ -1,0 +1,19 @@
+https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f
+https://www.thepolyglotdeveloper.com/2019/01/getting-started-mongodb-docker-container-deployment/
+https://antoncodes.com/article/expressjs-mongodb-with-dependency-injection
+
+# Node on docker
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+#mongodb
+https://zellwk.com/blog/crud-express-mongodb/
+
+#docker
+# Get container ID
+$ docker ps
+
+# Print app output
+$ docker logs <container id>
+
+# Enter the container
+$ docker exec -it <container id> /bin/bash
