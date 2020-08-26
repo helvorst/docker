@@ -5,15 +5,26 @@ https://antoncodes.com/article/expressjs-mongodb-with-dependency-injection
 # Node on docker
 https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
-#mongodb
+#mongodb crud
 https://zellwk.com/blog/crud-express-mongodb/
 
-#docker
-# Get container ID
-$ docker ps
 
-# Print app output
-$ docker logs <container id>
+#docker with Dockerfile only
+1) docker build -t hel/docker-test-app .
+2) docker run -p 49160:8082 -d hel/docker-test-app
+-d = detached (background)
 
-# Enter the container
-$ docker exec -it <container id> /bin/bash
+#mongo
+1) docker pull mongo:latest
+2.0) docker-compose build - if Dockerfile changed
+2) docker-compose up -d
+3) check who is running
+docker ps
+4) docker volume ls
+4.4) docker logs <container id>
+5) docker exec -it mongo mongo -u root -p rootpassword 
+// 1st mongo - container name, 2nd mongo - mongo cli
+6) (mongo) show dbs
+7) (mongo) use ishtar-audioteka - creates db if not exists
+8) (mongo) db.playlist.insert({"song": "Cafe de Anatolia"}) - creates a collection and inserts 1 record
+8) (mongo) show collections 
